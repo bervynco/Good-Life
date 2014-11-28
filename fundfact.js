@@ -1,6 +1,7 @@
-function fundFactPanelController($scope)
-{
-	$scope.funds = [
+var fundFactApp = angular.module('fundFactApp', []);
+
+fundFactApp.controller('FundFactCtrl', function ($scope) {
+  $scope.funds = [
 		{id:1, fundName:'Wealth Bond Fund'},
 		{id:2, fundName:'Wealth Balanced Fund'},
 		{id:3, fundName:'Wealth Equity Fund'},
@@ -30,4 +31,4 @@ function fundFactPanelController($scope)
 		{id:23, fundName:'Peso Phoenix 5 Fund'},
 		{id:24, fundName:'Peso Phoenix 7 Fund'}
 ];
-}
+});

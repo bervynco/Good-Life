@@ -3,12 +3,14 @@
 <html> 
 <title> Fund Fact Sheets - Good Life Philippines </title> 
 <head> 
-  <link rel="stylesheet" type="text/css" href="fundfact.css">
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-  <script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" type="text/css" href = "fundfact.css">
+  <script src = "http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  <script src = "http://netdna.bootstrapcdn.com/bootstrap/3.1.1/js/bootstrap.min.js"></script>
+  <script type = "text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.js"></script>
   <link rel="stylesheet" type="text/css" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+  <script type = "text/javascript" src="fundfact.js"></script>
 </head> 
-<body> 
+<body ng-app="fundFactApp"> 
 <nav class="navbar navbar-custom navbar-static-top">
   <div class="navbar-header">
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -40,13 +42,14 @@
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
-<div class="container">
-  <h2>Bootstrap 3 Navbar Example</h2>
-  <ul>
-    <li>Use <code>.navbar-static-top</code> to eliminate the border radius</li>
-    <li>Use <code>.navbar-right</code> to right-align link and dropdown</li>
-    <li>Use <code>.pull-right</code> in the right-aligned <code>.dropdown-menu</code> so that the menu isn't cutoff</li>
-  </ul>
+  <div ng-controller="FundFactCtrl">
+   <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
+          <div class="list-group">
+            <a href="#" class="list-group-item"  ng-repeat = "fund in funds" >{{fund.fundName}}</a>
+          </div>
+   </div><!--/.sidebar-offcanvas-->
+  </div>
+      
 </div>
 </body> 
 
