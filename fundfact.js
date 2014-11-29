@@ -32,3 +32,14 @@ fundFactApp.controller('FundFactCtrl', function ($scope) {
 		{id:24, fundName:'Peso Phoenix 7 Fund'}
 ];
 });
+
+$(document).ready(function() {
+    $( '.dropdown' ).hover(
+        function(){
+            $(this).children('.sub-menu').slideDown(200);
+        },
+        function(){
+            $(this).children('.sub-menu').slideUp(200);
+        }
+    );
+}); // end ready
