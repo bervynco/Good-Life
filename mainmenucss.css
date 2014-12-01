@@ -28,3 +28,7 @@
 .navbar-custom .icon-bar {
     background-color:#0276FD;
 }
+
+.container { 
+    width: 100%;
+}

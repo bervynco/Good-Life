@@ -1,9 +1,5 @@
-var fundFactApp = angular.module('fundFactApp', []);
-
-fundFactApp.factory('fundFactory', function() {
-  return {
-    getFundNames: function() {
-      return  [{"id":"1", "fundName":"Wealth Bond Fund", "group": "1"},
+[		
+		{"id":"1", "fundName":"Wealth Bond Fund", "group": "1"},
 		{"id":"2", "fundName":"Wealth Balanced Fund", "group": "1"},
 		{"id":"3", "fundName":"Wealth Equity Fund", "group": "1"},
 		{"id":"4", "fundName":"Liquidity Fund", "group": "1"},
@@ -31,22 +27,4 @@ fundFactApp.factory('fundFactory', function() {
 		{"id":"22", "fundName":"Dollar Phoenix 7 Fund","group": "2"},
 		{"id":"23", "fundName":"Peso Phoenix 5 Fund", "group": "1"},
 		{"id":"24", "fundName":"Peso Phoenix 7 Fund", "group": "1"}
-		];
-    },
-  };
-});
-fundFactApp.controller('FundFactController', function($scope, fundFactory) {
-  $scope.funds = fundFactory.getFundNames();
-});
-
-
-$(document).ready(function() {
-    $( '.dropdown' ).hover(
-        function(){
-            $(this).children('.sub-menu').slideDown(2000);
-        },
-        function(){
-            $(this).children('.sub-menu').slideUp(2000);
-        }
-    );
-}); // end ready
+]

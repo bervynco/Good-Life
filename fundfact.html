@@ -34,41 +34,27 @@
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
-  <div ng-controller="FundFactCtrl">
-    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 5px; *width: 180px;">
-    <li class="dropdown-submenu">
-      <a tabindex="-1" href="#">Peso Funds</a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Second level</a></li>
-        <li><a href="#">Second level</a></li>
-        <li><a href="#">Second level</a></li>
-      </ul>
-    </li>
-    <li class="dropdown-submenu">
-      <a tabindex="-1" href="#">Dollar Funds</a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Second level</a></li>
-        <li><a href="#">Second level</a></li>
-        <li><a href="#">Second level</a></li>
-      </ul>
-    </li>
-    <li class="dropdown-submenu">
-      <a tabindex="-1" href="#">3G-X Dollar Funds</a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Second level</a></li>
-        <li><a href="#">Second level</a></li>
-        <li><a href="#">Second level</a></li>
-      </ul>
-    </li>
-    <li class="dropdown-submenu">
-      <a tabindex="-1" href="#">3G-X Peso Funds</a>
-      <ul class="dropdown-menu">
-        <li><a href="#">Second level</a></li>
-        <li><a href="#">Second level</a></li>
-        <li><a href="#">Second level</a></li>
-      </ul>
-    </li>
-    </ul>
+  <div ng-controller="FundFactController">
+    <div id="fundFactNames">
+      <div class="list-group panel"><!--data-parent="#SubMenu1 data-toggle="collapse"" beside datatoggle -->
+        <a href="#pesoFunds" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#fundFactNames">Peso Funds</a>
+          <div class="collapse" id="pesoFunds">
+            <a href="#" class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '1'}:true">{{fund.fundName}}</a>
+          </div>
+        <a href="#dollarFunds" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#fundFactNames">Dollar Funds</a>
+          <div class="collapse" id="dollarFunds">
+            <a href="#" class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '2'}:true">{{fund.fundName}}</a>
+          </div>
+        <a href="#3gxDollar" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#fundFactNamesu">3G-X Dollar Funds</a>
+          <div class="collapse" id="3gxDollar">
+            <a href="#" class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '3'}:true">{{fund.fundName}}</a>
+          </div>
+        <a href="#3gxPeso" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#fundFactNames">3G-X Peso Funds</a>
+          <div class="collapse" id="3gxPeso">
+            <a href="#" class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '4'}:true">{{fund.fundName}}</a>
+          </div>
+      </div>
+    </div>
   </div>
     <div class="row row-offcanvas row-offcanvas-right">
       <div class="jumbotron">
