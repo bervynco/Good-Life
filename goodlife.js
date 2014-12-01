@@ -50,3 +50,5 @@ $(document).ready(function() {
         }
     );
 }); // end ready
+
+fundFactApp.
