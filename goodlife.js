@@ -53,7 +53,7 @@ $(document).ready(function() {
 
 //Angular App Module and Controller
 
-14.600211, 120.974237
+//14.600211, 120.974237
 contactApp.controller('MapController', function ($scope) {
 var link = function(scope, element, attrs) {
         var map, infoWindow;
