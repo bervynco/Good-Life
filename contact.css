@@ -29,7 +29,7 @@
     background-color:#33aa33;
 }
 
-.map {
+.angular-google-map-container{
     min-width: 300px;
     min-height: 500px;
     width: 100%;
