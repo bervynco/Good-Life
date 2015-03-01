@@ -39,7 +39,7 @@
       <div class="list-group panel"><!--data-parent="#SubMenu1 data-toggle="collapse"" beside datatoggle -->
         <a href="#pesoFunds" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#fundFactNames">Peso Funds</a>
           <div class="collapse" id="pesoFunds">
-            <a href="#" class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '1'}:true">{{fund.fundName}}</a>
+            <a href="#" class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '1'}:true" ng-click="getDescription(fund.id)">{{fund.fundName}}</a>
           </div>
         <a href="#dollarFunds" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#fundFactNames">Dollar Funds</a>
           <div class="collapse" id="dollarFunds">
