@@ -152,8 +152,12 @@ fundFactApp.controller('FundFactController', function($scope, fundFactory, $filt
   	$scope.funds = fundFactory.getFundNames();
 
   	$scope.getDescription=function(fundId){
-    	console.log(fundFactory.getFundNames()[fundId].fundDescription);
-    	p.setText(fundFactory.getFundNames()[fundId].fundDescription);
+  		
+    	//$scope.postDescription(fundFactory.getFundNames()[fundId].fundDescription);
+    	//console.log(fundFactory.getFundNames()[fundId].fundDescription);
+    	$scope.fundDescriptionModel = fundFactory.getFundNames()[fundId].fundDescription;
+
+    	
 }
 });
 

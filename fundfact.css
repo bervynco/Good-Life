@@ -35,6 +35,7 @@
     left: 25%;
     width: 75%;
     top: 10%;
+    text-align: justify;
 }
 .list-group.panel > .list-group-item {
   border-bottom-right-radius: 4px;
@@ -43,6 +44,7 @@
   height: 100%;
   background-color: #3B5998;
   color: #ffffff;
+  cursor:pointer;
 }
 .list-group-submenu {
   margin-left:20px;
@@ -51,4 +53,5 @@
 }
 .list-group-item{
     width: 20%;
+    cursor:pointer;
 }

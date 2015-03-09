@@ -39,28 +39,27 @@
       <div class="list-group panel"><!--data-parent="#SubMenu1 data-toggle="collapse"" beside datatoggle -->
         <a href="#pesoFunds" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#fundFactNames">Peso Funds</a>
           <div class="collapse" id="pesoFunds">
-            <a href="#" class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '1'}:true" ng-click="getDescription(fund.id)">{{fund.fundName}}</a>
+            <a class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '1'}:true" ng-click="getDescription(fund.id)">{{fund.fundName}}</a>
           </div>
         <a href="#dollarFunds" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#fundFactNames">Dollar Funds</a>
           <div class="collapse" id="dollarFunds">
-            <a href="#" class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '2'}:true">{{fund.fundName}}</a>
+            <a class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '2'}:true" ng-click="getDescription(fund.id)">{{fund.fundName}}</a>
           </div>
-        <a href="#3gxDollar" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#fundFactNamesu">3G-X Dollar Funds</a>
+        <a href="#3gxDollar" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#fundFactNames">3G-X Dollar Funds</a>
           <div class="collapse" id="3gxDollar">
-            <a href="#" class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '3'}:true">{{fund.fundName}}</a>
+            <a class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '3'}:true" ng-click="getDescription(fund.id)">{{fund.fundName}}</a>
           </div>
         <a href="#3gxPeso" class="list-group-item list-group-item-success" data-toggle="collapse" data-parent="#fundFactNames">3G-X Peso Funds</a>
           <div class="collapse" id="3gxPeso">
-            <a href="#" class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '4'}:true">{{fund.fundName}}</a>
+            <a class="list-group-item" ng-repeat = "fund in funds| filter:{'group':  '4'}:true" ng-click="getDescription(fund.id)">{{fund.fundName}}</a>
           </div>
       </div>
+        <div class="row row-offcanvas row-offcanvas-right">
+          <div class = "jumbotron">
+            <p ng-model="fundDescriptionModel" ng-bind="fundDescriptionModel"></p>
+          </div>
+        </div>
     </div>
-  </div>
-    <div class="row row-offcanvas row-offcanvas-right">
-      <div class="jumbotron">
-            <h1>Hello, world!</h1>
-            <p>This is an example to show the potential of an offcanvas layout pattern in Bootstrap. Try some responsive-range viewport sizes to see it in action.</p>
-      </div>
   </div>
       
 </div>
